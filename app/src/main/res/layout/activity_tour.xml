@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_app_tour">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".09"/>
+
+    <ImageView
+        android:id="@+id/iv_logo_part1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/logo_part1"
+        android:layout_marginRight="3dp"
+        android:transitionName="logo_part1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/iv_logo_part2"
+        app:layout_constraintTop_toBottomOf="@+id/gl1"/>
+
+    <ImageView
+        android:id="@+id/iv_logo_part2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/logo_part2"
+        android:layout_marginLeft="3dp"
+        android:transitionName="logo_part2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/gl1"
+        app:layout_constraintLeft_toRightOf="@+id/iv_logo_part1"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/circle_page_indicator"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo_part1"/>
+
+    <com.letzunite.letzunite.utils.CirclePageIndicator
+        android:id="@+id/circle_page_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bt_create_account" />
+
+    <Button
+        android:id="@+id/bt_create_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/DefaultMaterialButton"
+        android:text="Create an account"
+        android:padding="18dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_login"/>
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/gl2"
+        android:text="@string/already_has_account"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".91"/>
+
+</android.support.constraint.ConstraintLayout>

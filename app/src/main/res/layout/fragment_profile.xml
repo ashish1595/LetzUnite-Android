@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.letzunite.letzunite.utils.UserAvatar
+            android:id="@+id/iv_user_avatar"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:src="@drawable/deven"
+            app:border_color="@color/color_EFEDF0"
+            app:border_width="3dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="Deven Singh"
+            android:textColor="@color/color_black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_user_avatar" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Gurugram, Haryana"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="devensingh1727@gmail.com"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91-9810584951"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_about"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/color_F3F3F3"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_number">
+
+            <TextView
+                android:id="@+id/tv_profile_completion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile completion"
+                android:textColor="@color/color_primary"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatSeekBar
+                android:id="@+id/sb_profile_completion"
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="10dp"
+                android:progress="25"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_profile_completion" />
+
+            <ImageView
+                android:id="@+id/iv_star1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star"
+                app:layout_constraintBottom_toBottomOf="@+id/sb_profile_completion"
+                app:layout_constraintLeft_toLeftOf="@+id/sb_profile_completion"
+                app:layout_constraintTop_toTopOf="@+id/sb_profile_completion" />
+
+
+            <ImageView
+                android:id="@+id/iv_star2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_star"
+                app:layout_constraintBottom_toBottomOf="@+id/sb_profile_completion"
+                app:layout_constraintLeft_toRightOf="@+id/iv_star1"
+                app:layout_constraintRight_toLeftOf="@+id/iv_star3"
+                app:layout_constraintTop_toTopOf="@+id/sb_profile_completion" />
+
+
+            <ImageView
+                android:id="@+id/iv_star3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_star"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/sb_profile_completion"
+                app:layout_constraintLeft_toRightOf="@+id/iv_star2"
+                app:layout_constraintRight_toLeftOf="@+id/iv_star4"
+                app:layout_constraintTop_toTopOf="@+id/sb_profile_completion" />
+
+
+            <ImageView
+                android:id="@+id/iv_star4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_star"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/sb_profile_completion"
+                app:layout_constraintLeft_toRightOf="@+id/iv_star3"
+                app:layout_constraintRight_toLeftOf="@+id/iv_star5"
+                app:layout_constraintTop_toTopOf="@+id/sb_profile_completion" />
+
+            <ImageView
+                android:id="@+id/iv_star5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/sb_profile_completion"
+                app:layout_constraintRight_toRightOf="@+id/sb_profile_completion"
+                app:layout_constraintTop_toTopOf="@+id/sb_profile_completion" />
+
+            <TextView
+                android:id="@+id/tv_about_me_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="About Me"
+                android:textColor="@color/color_primary"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sb_profile_completion" />
+
+
+            <TextView
+                android:id="@+id/tv_about_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Me"
+                android:textColor="@color/color_black"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_about_me_label" />
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_blood_group"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_blood_group"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/ll_blood_donation"
+            app:layout_constraintTop_toBottomOf="@+id/cl_about">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star" />
+
+            <TextView
+                android:id="@+id/tv_blood_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O+"
+                android:textColor="@color/color_white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blood Group"
+                android:textColor="@color/color_white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_blood_donation"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_blood_donated"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@+id/ll_blood_group"
+            app:layout_constraintRight_toLeftOf="@+id/ll_blood_received"
+            app:layout_constraintTop_toBottomOf="@+id/cl_about">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star" />
+
+            <TextView
+                android:id="@+id/tv_donated_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 Units"
+                android:textColor="@color/color_white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blood Donated"
+                android:textColor="@color/color_white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_blood_received"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_blood_received"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@+id/ll_blood_donation"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_about">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star" />
+
+            <TextView
+                android:id="@+id/tv_received_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5 Units"
+                android:textColor="@color/color_white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blood Received"
+                android:textColor="@color/color_white"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

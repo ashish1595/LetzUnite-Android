@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.letzunite.letzunite"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+
+        resValue 'string', 'app_name', "Letz Unite"
+        buildConfigField 'String', 'LOGIN_URL', LOGIN_URL
+        buildConfigField 'String', 'PROFILE_URL', PROFILE_URL
+        buildConfigField 'String', 'FEEDS_URL', FEEDS_URL
+        buildConfigField 'String', 'BLOOD_REQUEST_URL', BLOOD_URL
+        buildConfigField 'String', 'BLOOD_BANK_URL', BLOOD_BANK_URL
+        buildConfigField 'String', 'NEAR_BY_USERS_URL',NEAR_BY_USERS_URL
+    }
+
+    flavorDimensions 'flavour'
+
+    productFlavors {
+
+        developmentEnviornment {
+            dimension 'flavour'
+            applicationId "com.letzunite.letzunite"
+            resValue 'string', 'app_name', "Letz Unite - Dev"
+            buildConfigField 'String', 'BASE_URL', BASE_URL_DEV
+        }
+
+        productionEnviornment {
+            dimension 'flavour'
+            applicationId "com.letzunite.letzunite.test"
+            resValue 'string', 'app_name', "Letz Unite"
+            buildConfigField 'String', 'BASE_URL', BASE_URL_PROD
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
+    implementation "com.google.android:flexbox:$rootProject.flexboxVersion"
+    implementation "com.google.android.gms:play-services-maps:$rootProject.playServiceVersion"
+    implementation "com.google.maps.android:android-maps-utils:$rootProject.googleMapUtilVersion"
+    implementation "android.arch.lifecycle:extensions:$rootProject.archLifecycleVersion"
+    implementation "android.arch.persistence.room:runtime:$rootProject.archRoomVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$rootProject.archLifecycleVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$rootProject.archRoomVersion"
+    implementation "com.jakewharton:butterknife:$rootProject.butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterKnifeVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitGsonConvertorVersion"
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion") {
+        exclude module: 'okhttp'
+    }
+    implementation "com.squareup.okhttp3:okhttp:${rootProject.okhttpVersion}"
+    implementation("com.squareup.okhttp3:logging-interceptor:$okhttpLoggingInterceptorVersion") {
+        exclude module: 'okhttp'
+    }
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.glideVersion"
+
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+
+    implementation "com.facebook.stetho:stetho:$rootProject.stethoVersion"
+    implementation "com.facebook.stetho:stetho-okhttp3:$rootProject.stethoVersion"
+
+    implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+    implementation "com.google.dagger:dagger-android:$rootProject.dagger2Version"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.dagger2Version"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.dagger2Version"
+
+    implementation 'com.soundcloud.android:android-crop:1.0.1@aar'
+}

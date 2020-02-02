@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#c80101</color>
+    <color name="color_primary_dark">#C00C00</color>
+    <color name="color_primary_light">#BCBCBC</color>
+    <color name="color_accent">#4E4E4E</color>
+    <color name="color_primary_text">#24253d</color>
+    <color name="color_secondary_text">#8024253d</color>
+    <color name="color_divider">#BDBDBD</color>
+    <color name="color_hint">#8024253d</color>
+
+
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_red">#FF0000</color>
+    <color name="color_yellow">#FFFF00</color>
+    <color name="color_blue">#0000FF</color>
+    <color name="color_black">#000000</color>
+    <color name="color_gray">#c4c4c4</color>
+
+    <color name="color_label">#e6c80101</color>
+    <color name="color_bottom_line">#20000000</color>
+
+    //colors with color codes
+    <color name="color_6F71FD">#6F71FD</color>
+    <color name="color_9CA7F9">#9CA7F9</color>
+    <color name="color_9873FA">#9873FA</color>
+    <color name="color_F3F3F3">#F3F3F3</color>
+    <color name="color_EFEDF0">#EFEDF0</color>
+    <color name="color_6300c6">#6300c6</color>
+    <color name="color_dcdcdc">#dcdcdc</color>
+
+    <color name="default_circle_indicator_fill_color">#c80101</color>
+    <color name="default_circle_indicator_page_color">#d71414</color>
+    <color name="default_circle_indicator_stroke_color">#40c80101</color>
+</resources>
